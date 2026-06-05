@@ -1,0 +1,48 @@
+// ============================================================
+// Page — Content templates: CMS pages, contact, store locator,
+// sitemap, manufacturers/suppliers index, 404 / maintenance
+// ============================================================
+
+// CMS page (cms/page.tpl)
+.cms-page .page-content,
+#cms .rte-content { color: var(--pnd-body); line-height: 1.7; max-width: 760px; }
+.cms-page h1,
+.cms-hero h1 { font-family: var(--pnd-font-head); font-weight: 700; color: var(--pnd-ink); }
+.cms-hero { background: linear-gradient(150deg, var(--pnd-brand), var(--pnd-teal-900)); color: #fff; border-radius: var(--pnd-radius); padding: 54px 56px; margin-bottom: 40px; position: relative; overflow: hidden; }
+.cms-hero h1 { color: #fff; }
+.cms-hero .eyebrow { color: var(--pnd-accent); }
+
+// FAQ accordion (often inside CMS)
+.faq-item { border-bottom: 1px solid var(--pnd-line); }
+.faq-q { width: 100%; text-align: left; background: none; border: 0; padding: 20px 0; font-family: var(--pnd-font-head); font-weight: 700; color: var(--pnd-ink); display: flex; align-items: center; justify-content: space-between; cursor: pointer; }
+.faq-a { color: var(--pnd-body); line-height: 1.65; }
+
+// Contact (contact.tpl)
+.contact-form .form-fields,
+#contact .card { border: 1px solid var(--pnd-line); border-radius: var(--pnd-radius); padding: 28px; }
+.contact-rich .icon { color: var(--pnd-brand); }
+
+// Store locator (stores.tpl)
+.store-item,
+.store-picture + .store-description { border: 1px solid var(--pnd-line); border-radius: var(--pnd-radius); }
+.store-description h3 { font-family: var(--pnd-font-head); color: var(--pnd-ink); }
+
+// Sitemap
+.sitemap a { color: var(--pnd-body); }
+.sitemap a:hover { color: var(--pnd-brand); }
+
+// Manufacturers / suppliers brand tiles
+.brand,
+.supplier-item { border: 1px solid var(--pnd-line); border-radius: var(--pnd-radius); padding: 18px; text-align: center; transition: box-shadow 0.15s, transform 0.15s; }
+.brand:hover,
+.supplier-item:hover { box-shadow: var(--pnd-sh-card); transform: translateY(-2px); }
+
+// 404 / error pages (errors/*.tpl, page-not-found)
+#pagenotfound .page-content,
+.page-not-found { text-align: center; padding: 64px 20px; }
+#pagenotfound h1,
+.page-not-found h1 { font-size: 80px; color: var(--pnd-brand); font-family: var(--pnd-font-head); }
+.page-not-found .search-widget input { max-width: 420px; }
+
+// Maintenance
+#maintenance .maintenance-message { text-align: center; padding: 80px 20px; color: var(--pnd-body); }

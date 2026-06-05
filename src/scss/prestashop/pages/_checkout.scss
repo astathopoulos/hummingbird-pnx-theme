@@ -1,0 +1,50 @@
+// ============================================================
+// Page — Checkout (checkout-grid, checkout-step, delivery/payment
+// option cards, order summary, order confirmation)
+// ============================================================
+
+.checkout-grid { display: grid; grid-template-columns: 1fr 380px; gap: 36px; align-items: start; padding-bottom: 64px; }
+.checkout-grid__content { min-width: 0; }
+.checkout-step { border: 1px solid var(--pnd-line); border-radius: var(--pnd-radius); padding: 26px 28px; margin-bottom: 22px; }
+.checkout-step__title { font-family: var(--pnd-font-head); font-size: 18px; color: var(--pnd-ink); margin-bottom: 4px; display: flex; align-items: center; gap: 10px; }
+.checkout-step__num { width: 26px; height: 26px; border-radius: 50%; background: var(--pnd-brand); color: #fff; display: grid; place-items: center; font-size: 13px; }
+
+// Step progress nav
+.checkout-navigation { display: flex; align-items: center; gap: 10px; max-width: 640px; margin: 8px auto 32px; }
+
+// Delivery / payment option cards (.opt-card / delivery-option)
+.opt-card,
+.delivery-option { display: flex; align-items: center; gap: 14px; border: 1.5px solid var(--pnd-line); border-radius: 14px; padding: 16px 18px; cursor: pointer; margin-bottom: 12px; transition: border-color 0.15s; }
+.opt-card:hover,
+.delivery-option:hover { border-color: var(--pnd-brand-600); }
+.opt-card.sel,
+.delivery-option.selected { border-color: var(--pnd-brand); background: var(--pnd-tint-2); }
+.opt-radio { flex: none; width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--pnd-line); display: grid; place-items: center; }
+.opt-card.sel .opt-radio { border-color: var(--pnd-brand); }
+.opt-card.sel .opt-radio::after { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--pnd-brand); }
+.opt-ic { flex: none; width: 40px; height: 40px; border-radius: 11px; background: var(--pnd-tint); color: var(--pnd-brand); display: grid; place-items: center; }
+.opt-body { flex: 1; }
+.opt-body b { font-family: var(--pnd-font-head); font-size: 14.5px; color: var(--pnd-ink); display: block; }
+.opt-body span { font-size: 13px; color: var(--pnd-muted); }
+.opt-price { font-family: var(--pnd-font-head); font-weight: 700; font-size: 15px; color: var(--pnd-ink); }
+
+// Order summary aside
+.checkout-grid__aside-wrapper { border: 1px solid var(--pnd-line); border-radius: var(--pnd-radius); padding: 24px; position: sticky; top: 72px; }
+.co-item { display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; align-items: center; }
+.co-item .ci-thumb { width: 48px; height: 48px; border-radius: 10px; overflow: hidden; position: relative; }
+.co-item .ci-q { position: absolute; top: 2px; right: 2px; z-index: 3; min-width: 20px; height: 20px; padding: 0 4px; border-radius: 10px; background: var(--pnd-brand); color: #fff; font-family: var(--pnd-font-head); font-weight: 700; font-size: 11px; display: grid; place-items: center; border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); }
+.sum-row { display: flex; align-items: center; justify-content: space-between; padding: 9px 0; font-size: 14.5px; color: var(--pnd-body); }
+.sum-row.total { border-top: 1px solid var(--pnd-line); margin-top: 8px; padding-top: 16px; font-family: var(--pnd-font-head); font-weight: 700; font-size: 20px; color: var(--pnd-ink); }
+
+// Consent (terms) checkbox sentence
+.fopt--consent { align-items: flex-start; gap: 11px; line-height: 1.5; }
+.fopt--consent .fbox { margin-top: 1px; }
+.fopt--consent a { color: var(--pnd-brand); font-weight: 600; }
+
+// Order confirmation (order-confirmation.tpl)
+.co-done { max-width: 620px; margin: 30px auto; text-align: center; padding: 30px; }
+.co-done .check { width: 84px; height: 84px; border-radius: 50%; background: var(--pnd-tint); color: var(--pnd-brand); display: grid; place-items: center; margin: 0 auto 22px; }
+.co-done h1 { font-family: var(--pnd-font-head); font-size: 30px; color: var(--pnd-ink); margin-bottom: 10px; }
+.co-done p { color: var(--pnd-muted); font-size: 15.5px; }
+.co-done .order-no { font-family: var(--pnd-font-head); font-weight: 700; color: var(--pnd-ink); }
+.co-done .actions { display: flex; gap: 12px; justify-content: center; margin-top: 26px; }

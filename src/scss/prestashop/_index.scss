@@ -1,0 +1,20 @@
+// Index — prestashop layer barrel (mirrors Hummingbird's _index.scss files)
+@forward "base/tokens";
+@forward "base/fonts";
+@forward "base/global";
+
+@forward "layout/header";
+@forward "layout/footer";
+
+@forward "components/catalog";
+@forward "components/ui";
+@forward "components/navigation";
+
+@forward "pages/index";
+@forward "pages/category";
+@forward "pages/product";
+@forward "pages/cart";
+@forward "pages/checkout";
+@forward "pages/customer";
+@forward "pages/authentication";
+@forward "pages/content";

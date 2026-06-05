@@ -1,0 +1,43 @@
+// ============================================================
+// Page — Authentication (login, registration, password reset,
+// guest tracking). Templates: customer/authentication.tpl,
+// registration.tpl, password-*.tpl, guest-login.tpl
+// ============================================================
+
+.page-authentication #content,
+.page-registration #content,
+.page-password #content { max-width: 520px; margin: 24px auto; }
+
+.login-form,
+.register-form,
+#authentication .card,
+#password .card {
+  border: 1px solid var(--pnd-line);
+  border-radius: var(--pnd-radius);
+  padding: 32px;
+  background: #fff;
+  box-shadow: var(--pnd-sh-card);
+}
+
+.page-authentication .page-title,
+.page-registration .page-title { text-align: center; }
+
+// Password field with reveal toggle
+.pwd-wrap { position: relative; }
+.pwd-toggle { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 34px; height: 34px; border: 0; background: none; color: var(--pnd-muted); cursor: pointer; display: grid; place-items: center; }
+.pwd-toggle:hover { color: var(--pnd-brand); }
+
+// Password strength meter
+.password-strength,
+.field-password-policy { font-size: 12.5px; color: var(--pnd-muted); }
+
+.forgot-password { color: var(--pnd-brand); font-weight: 600; font-family: var(--pnd-font-head); font-size: 12.5px; }
+.forgot-password:hover { text-decoration: underline; }
+
+.auth-alt,
+.no-account,
+.register-form__login-prompt { text-align: center; color: var(--pnd-muted); font-size: 14.5px; margin-top: 18px; }
+.auth-alt a { color: var(--pnd-brand); font-weight: 600; font-family: var(--pnd-font-head); }
+
+// Switch login <-> register tabs (some shops)
+.account-creation-tabs .nav-link.active { color: var(--pnd-brand); border-color: var(--pnd-brand); }

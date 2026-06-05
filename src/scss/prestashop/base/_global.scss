@@ -1,0 +1,34 @@
+// ============================================================
+// Global base — body, headings, links, selection
+// ============================================================
+
+body {
+  font-family: var(--pnd-font-body);
+  color: var(--pnd-body);
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--pnd-font-head);
+  color: var(--pnd-ink);
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: var(--pnd-brand);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+a:hover { color: var(--pnd-teal-700); }
+
+hr { border-color: var(--pnd-line); opacity: 1; }
+
+::selection { background: rgba(var(--pnd-brand-rgb), 0.16); }
+
+// Material Icons baseline (Hummingbird ships them via codepoints)
+.material-icons { line-height: 1; vertical-align: middle; }

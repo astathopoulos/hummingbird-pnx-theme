@@ -1,0 +1,86 @@
+// ============================================================
+// Component — UI primitives styled on real Hummingbird/Bootstrap blocks
+// buttons · forms · tables · badges · pagination · breadcrumb ·
+// alerts/notifications · page-title · address-card · dl-list
+// ============================================================
+
+// Buttons (extend BS .btn beyond the variable overrides)
+.btn { font-family: var(--pnd-font-head); font-weight: 600; border-radius: 12px; }
+.btn-primary { background: var(--pnd-brand); border-color: var(--pnd-brand); }
+.btn-primary:hover, .btn-primary:focus { background: var(--pnd-teal-700); border-color: var(--pnd-teal-700); }
+.btn-secondary { background: var(--pnd-accent); border-color: var(--pnd-accent); color: var(--pnd-teal-900); }
+.btn-outline-primary { color: var(--pnd-brand); border-color: var(--pnd-line); }
+.btn-outline-primary:hover { background: var(--pnd-brand); border-color: var(--pnd-brand); color: #fff; }
+.btn-square-icon { width: 48px; padding: 0; display: inline-grid; place-items: center; }
+.btn-block { width: 100%; }
+
+// Forms (form-fields.tpl)
+.form-control,
+.form-select,
+.input-group .form-control { border-radius: 12px; border-color: var(--pnd-line); background: var(--pnd-tint-2); }
+.form-control:focus,
+.form-select:focus { background: #fff; border-color: var(--pnd-brand); box-shadow: 0 0 0 3px rgba(var(--pnd-brand-rgb), 0.10); }
+.form-label,
+label.required { font-family: var(--pnd-font-head); font-weight: 600; color: var(--pnd-ink); font-size: 13.5px; }
+.form-control-label { color: var(--pnd-ink); }
+.form-check-input:checked { background-color: var(--pnd-brand); border-color: var(--pnd-brand); }
+.custom-radio input:checked + span,
+.form-check-input { accent-color: var(--pnd-brand); }
+
+// Tables (grid-table / table-wrapper)
+.table-wrapper { border: 1px solid var(--pnd-line); border-radius: var(--pnd-radius); overflow: hidden; }
+.table { color: var(--pnd-body); margin: 0; }
+.table thead th { font-family: var(--pnd-font-head); font-weight: 700; font-size: 12.5px; letter-spacing: 0.03em; text-transform: uppercase; color: var(--pnd-muted); background: var(--pnd-tint-2); border-color: var(--pnd-line); }
+.table td, .table th { border-color: var(--pnd-line-2); vertical-align: middle; }
+
+// Badges / labels
+.badge { font-family: var(--pnd-font-head); font-weight: 700; border-radius: var(--pnd-radius-pill); }
+.badge.bg-primary { background: var(--pnd-brand) !important; }
+.badge.bg-success { background: #188251 !important; }
+.badge.bg-danger { background: var(--pnd-sale) !important; }
+.label-success { color: #188251; }
+.label-danger { color: var(--pnd-sale); }
+
+// Pagination
+.pagination { gap: 8px; }
+.page-link { display: inline-flex; align-items: center; justify-content: center; min-width: 42px; height: 42px; padding: 0 12px; border-radius: 12px; border: 1px solid var(--pnd-line); background: #fff; color: var(--pnd-ink); font-family: var(--pnd-font-head); font-weight: 600; }
+.page-link:hover { border-color: var(--pnd-brand); color: var(--pnd-brand); }
+.page-item.active .page-link,
+.page-item.current .page-link { background: var(--pnd-brand); border-color: var(--pnd-brand); color: #fff; }
+.page-item.disabled .page-link { opacity: 0.4; }
+
+// Breadcrumb
+.breadcrumb { font-size: 13px; }
+.breadcrumb a { color: var(--pnd-muted); }
+.breadcrumb a:hover { color: var(--pnd-brand); }
+.breadcrumb .breadcrumb-item.active,
+.breadcrumb li:last-child { color: var(--pnd-ink); font-weight: 600; }
+
+// Alerts / notifications
+.notifications-container { margin: 12px 0; }
+.alert { border: 0; border-radius: var(--pnd-radius-sm); padding: 14px 18px; font-size: 14.5px; }
+.alert-success { background: rgba(24, 130, 81, 0.10); color: #0f6b40; }
+.alert-danger { background: var(--pnd-sale-bg); color: var(--pnd-sale); }
+.alert-warning { background: rgba(243, 176, 28, 0.14); color: #946a06; }
+.alert-info { background: var(--pnd-tint); color: var(--pnd-teal-700); }
+
+// Page-title section
+.page-title-section { margin: 8px 0 18px; }
+.page-title { font-family: var(--pnd-font-head); font-weight: 700; font-size: 30px; color: var(--pnd-ink); }
+.page-subtitle { color: var(--pnd-muted); max-width: 60ch; }
+
+// Address card (account)
+.address-card,
+.address { border: 1px solid var(--pnd-line); border-radius: var(--pnd-radius); padding: 22px; background: #fff; }
+.address-card__header,
+.address h4 { font-family: var(--pnd-font-head); font-weight: 700; color: var(--pnd-ink); margin-bottom: 8px; }
+.address-card__body { color: var(--pnd-body); font-size: 14.5px; line-height: 1.6; }
+
+// Definition lists (order info etc.)
+.dl-list dt { font-family: var(--pnd-font-head); font-weight: 600; color: var(--pnd-ink); }
+.dl-list dd { color: var(--pnd-body); }
+
+// Section title (module rows)
+.section-title,
+.featured-products .h2,
+.h2.products-section-title { font-family: var(--pnd-font-head); font-weight: 700; color: var(--pnd-ink); }

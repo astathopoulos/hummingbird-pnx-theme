@@ -1,0 +1,55 @@
+// ============================================================
+// Page — Product (product.tpl): gallery, prices, availability,
+// add-to-cart, accordion tabs, reviews, related/accessories
+// ============================================================
+
+.product__container { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; padding: 8px 0 16px; align-items: start; }
+.product__left { min-width: 0; }
+
+// Gallery
+.product__images { display: grid; grid-template-columns: 84px 1fr; gap: 16px; align-items: start; }
+.product__thumbnails { grid-column: 1; grid-row: 1; }
+.product__carousel { grid-column: 2; grid-row: 1; display: block; position: relative; border-radius: var(--pnd-radius); overflow: hidden; aspect-ratio: 1 / 1; background: var(--pnd-tint-2); }
+.product__thumbnails-list { display: flex; flex-direction: column; gap: 12px; list-style: none; margin: 0; padding: 0; }
+.product__thumbnail { width: 84px; height: 84px; border-radius: var(--pnd-radius-sm); overflow: hidden; border: 2px solid var(--pnd-line); background: var(--pnd-tint-2); cursor: pointer; padding: 0; }
+.product__thumbnail.active { border-color: var(--pnd-brand); }
+
+// Info column
+.product__name,
+.product-information h1 { font-size: 30px; font-family: var(--pnd-font-head); font-weight: 700; color: var(--pnd-ink); }
+.product__brand a { color: var(--pnd-brand); font-family: var(--pnd-font-head); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; }
+.product__prices,
+.product-prices { display: flex; align-items: baseline; gap: 12px; margin: 16px 0; }
+.product-price,
+.current-price .price { font-family: var(--pnd-font-head); font-weight: 700; font-size: 34px; color: var(--pnd-ink); }
+.has-discount .product-price,
+.has-discount .current-price .price { color: var(--pnd-sale); }
+.regular-price { text-decoration: line-through; color: var(--pnd-faint); font-size: 18px; }
+.discount.discount-percentage { background: var(--pnd-sale); color: #fff; border-radius: var(--pnd-radius-pill); padding: 4px 10px; font-family: var(--pnd-font-head); font-weight: 700; font-size: 13px; }
+
+.product-availability { font-size: 14px; }
+.product-availability .material-icons.product-available { color: #188251; }
+
+// Add-to-cart row
+.product__quantity { height: 48px; }
+.product-add-to-cart .qty,
+.product__add-to-cart { display: flex; gap: 12px; align-items: stretch; margin: 18px 0; }
+.product-add-to-cart .add-to-cart,
+.product__add-to-cart-button { flex: 1; height: 48px; }
+
+// Accordion tabs (product description / details / reviews)
+.product-tabs .accordion-button,
+.accordion-button { font-family: var(--pnd-font-head); font-weight: 700; font-size: 17px; color: var(--pnd-ink); }
+.accordion-button:not(.collapsed) { color: var(--pnd-brand); background: var(--pnd-tint); }
+.accordion-body { color: var(--pnd-body); line-height: 1.65; }
+
+// Reviews
+.product__reviews { padding: 8px 0 40px; }
+.product-comment-list-item { border: 1px solid var(--pnd-line); border-radius: var(--pnd-radius-sm); padding: 18px; margin-bottom: 12px; }
+.star-rating .star,
+.comments-note .grade-stars { color: var(--pnd-star); }
+
+// Related / accessories rail
+.product-accessories { padding: 8px 0 64px; }
+.featured-products,
+.product-accessories .products { margin-top: 18px; }

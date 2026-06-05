@@ -1,0 +1,61 @@
+name: hummingbird_pnd
+display_name: "PharmacyNextDoor — Hummingbird child"
+version: 1.0.0
+author:
+  name: "PharmacyNextDoor"
+  email: "dev@pharmacynextdoor.gr"
+  url: "https://pharmacynextdoor.gr"
+
+# Child theme: inherits every Hummingbird template, layout and module
+# position, then layers our compiled stylesheet on top. No template is
+# duplicated unless we override markup — styling is selector-driven.
+parent: hummingbird
+
+meta:
+  compatibility:
+    from: 9.0.0
+    to: ~
+  available_layouts:
+    layout-full-width:
+      name: "Full width"
+      description: "No side columns"
+    layout-left-column:
+      name: "Left column"
+      description: "One column on the left"
+    layout-right-column:
+      name: "Right column"
+      description: "One column on the right"
+    layout-both-columns:
+      name: "Three columns"
+      description: "One column on the left and one on the right"
+
+assets:
+  # Loaded after the parent theme bundle (high priority value = later in the
+  # cascade) so our overrides win without !important.
+  css:
+    all:
+      - id: hummingbird_pnd-theme
+        path: assets/css/theme.css
+        media: all
+        priority: 300
+
+global_settings:
+  configuration:
+    PS_IMAGE_QUALITY: png
+  image_types:
+    cart_default: { width: 125, height: 125, scope: [products] }
+    small_default: { width: 98, height: 98, scope: [products, categories, manufacturers, suppliers, stores] }
+    medium_default: { width: 452, height: 452, scope: [products, manufacturers, suppliers] }
+    home_default: { width: 654, height: 654, scope: [products] }
+    large_default: { width: 1100, height: 1100, scope: [products, manufacturers] }
+    category_default: { width: 141, height: 180, scope: [categories] }
+
+theme_settings:
+  default_layout: layout-full-width
+  layouts:
+    category: layout-full-width
+    best-sales: layout-full-width
+    new-products: layout-full-width
+    prices-drop: layout-full-width
+    product: layout-full-width
+    cms: layout-full-width

@@ -1,0 +1,35 @@
+// ============================================================
+// PharmacyNextDoor — theme colour tokens (non-Bootstrap)
+// Brand greens pulled from the logo. These feed the Bootstrap
+// variable overrides in bootstrap/overrides/variables/.
+// ============================================================
+
+// Brand
+$pnd-teal-900: #0c3f39;
+$pnd-teal-700: #0f5249;
+$pnd-brand:    #15665c; // primary deep teal-green
+$pnd-brand-600:#1a7568;
+$pnd-accent:   #8dc63f; // lime
+$pnd-accent-600:#79b22c;
+
+// Surfaces
+$pnd-tint:      #eef5f3;
+$pnd-tint-2:    #f6faf9;
+$pnd-tint-warm: #f7f4ee;
+
+// Ink + lines
+$pnd-ink:    #16211e;
+$pnd-body:   #36433f;
+$pnd-muted:  #6a7672;
+$pnd-faint:  #93a09b;
+$pnd-line:   #e6ecea;
+$pnd-line-2: #eef2f1;
+
+// Status
+$pnd-sale: #d8453b;
+$pnd-star: #f3b01c;
+
+// Colors injected onto dark backgrounds (Hummingbird hook)
+$colors-on-dark: (
+  "danger": #ff6b76,
+);

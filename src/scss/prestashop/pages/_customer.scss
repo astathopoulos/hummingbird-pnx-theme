@@ -1,0 +1,39 @@
+// ============================================================
+// Page — Customer area (templates/customer/*)
+// my-account · history · order-detail · order-follow · order-return
+// · order-slip · addresses · address form · identity · vouchers
+// ============================================================
+
+// Account dashboard shell
+.page-customer-account #content,
+.page-my-account #content { max-width: 1000px; margin: 0 auto; }
+
+// Order history table (history.tpl → grid-table / table)
+#history table,
+.order-history .table { width: 100%; }
+#history .order-actions a,
+.order-actions .btn { white-space: nowrap; }
+.order-status-label,
+.label { display: inline-block; border-radius: var(--pnd-radius-pill); padding: 4px 12px; font-family: var(--pnd-font-head); font-weight: 700; font-size: 12px; }
+
+// Order detail (order-detail.tpl)
+.box,
+.order-detail-content .card { border: 1px solid var(--pnd-line); border-radius: var(--pnd-radius); padding: 24px; }
+#order-history .history-lines .history-line { border-bottom: 1px solid var(--pnd-line-2); padding: 12px 0; }
+.order-line { display: grid; grid-template-columns: 64px 1fr auto; gap: 14px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--pnd-line-2); }
+.order-confirmation-table th { background: var(--pnd-tint-2); }
+
+// Addresses (addresses.tpl + address card)
+.addresses-footer a,
+#addresses .address-footer a { color: var(--pnd-brand); font-family: var(--pnd-font-head); font-weight: 600; }
+.address .address-body address { font-style: normal; color: var(--pnd-body); line-height: 1.6; }
+
+// Identity / forms in account
+#identity .form-fields,
+.page-authentication .form-fields { max-width: 560px; }
+
+// Vouchers (discount.tpl)
+#discounts table .voucher-code { font-family: var(--pnd-font-head); font-weight: 700; color: var(--pnd-brand); }
+
+// Returns (order-return.tpl)
+#order-return-infos .table thead th { background: var(--pnd-tint-2); }

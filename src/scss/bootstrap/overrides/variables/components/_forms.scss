@@ -1,0 +1,18 @@
+// Per-component Bootstrap variable overrides — forms / inputs
+@use "../../../../abstract/variables/colors" as *;
+
+$input-padding-y: 0.7rem;
+$input-padding-x: 0.95rem;
+$input-bg: $pnd-tint-2;
+$input-border-color: $pnd-line;
+$input-border-radius: 0.75rem;
+$input-focus-bg: #ffffff;
+$input-focus-border-color: $pnd-brand;
+$input-focus-box-shadow: 0 0 0 3px rgba($pnd-brand, 0.10);
+$input-placeholder-color: $pnd-faint;
+$form-label-font-family: "Montserrat", system-ui, sans-serif;
+$form-label-font-weight: 600;
+$form-label-color: $pnd-ink;
+$form-check-input-checked-bg-color: $pnd-brand;
+$form-check-input-border: 1.5px solid $pnd-line;
+$form-check-input-width: 1.15em;

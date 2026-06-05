@@ -1,0 +1,49 @@
+// Per-component Bootstrap variable overrides — badges, breadcrumb, accordion,
+// dropdown, modal, pagination
+@use "../../../../abstract/variables/colors" as *;
+
+// Badges
+$badge-font-family: "Montserrat", system-ui, sans-serif;
+$badge-font-weight: 700;
+$badge-border-radius: 50rem;
+$badge-padding-y: 0.32em;
+$badge-padding-x: 0.6em;
+
+// Breadcrumb
+$breadcrumb-divider-color: $pnd-faint;
+$breadcrumb-active-color: $pnd-muted;
+$breadcrumb-font-size: 0.85rem;
+$breadcrumb-item-padding-x: 0.5rem;
+
+// Accordion
+$accordion-button-active-bg: $pnd-tint;
+$accordion-button-active-color: $pnd-brand;
+$accordion-border-color: $pnd-line;
+$accordion-button-focus-box-shadow: 0 0 0 3px rgba($pnd-brand, 0.12);
+$accordion-icon-active-color: $pnd-brand;
+
+// Dropdown
+$dropdown-border-color: $pnd-line;
+$dropdown-border-radius: 0.75rem;
+$dropdown-link-hover-bg: $pnd-tint-2;
+$dropdown-link-active-bg: $pnd-tint;
+$dropdown-link-active-color: $pnd-brand;
+$dropdown-box-shadow: 0 12px 40px rgba(12, 40, 36, 0.16);
+
+// Modal
+$modal-content-border-color: $pnd-line;
+$modal-content-border-radius: 1.25rem;
+$modal-header-border-color: $pnd-line-2;
+$modal-footer-border-color: $pnd-line-2;
+$modal-backdrop-bg: #0c2824;
+$modal-backdrop-opacity: 0.45;
+
+// Pagination
+$pagination-color: $pnd-ink;
+$pagination-border-color: $pnd-line;
+$pagination-border-radius: 0.75rem;
+$pagination-active-bg: $pnd-brand;
+$pagination-active-border-color: $pnd-brand;
+$pagination-hover-color: $pnd-brand;
+$pagination-hover-border-color: $pnd-brand;
+$pagination-focus-box-shadow: 0 0 0 3px rgba($pnd-brand, 0.15);

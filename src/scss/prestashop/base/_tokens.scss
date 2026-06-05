@@ -1,0 +1,73 @@
+// ============================================================
+// PharmacyNextDoor — runtime design tokens
+// Two jobs:
+//  1. Expose --pnd-* custom properties consumed by every partial.
+//  2. Re-map Hummingbird's compiled Bootstrap custom properties
+//     (--bs-*) so the theme restyles correctly even when dropped in
+//     WITHOUT recompiling the parent SCSS (pure CSS override path).
+// ============================================================
+
+:root {
+  // --- Brand ---
+  --pnd-teal-900: #0c3f39;
+  --pnd-teal-700: #0f5249;
+  --pnd-brand:    #15665c;
+  --pnd-brand-600:#1a7568;
+  --pnd-brand-rgb: 21, 102, 92;
+  --pnd-accent:   #8dc63f;
+  --pnd-accent-600:#79b22c;
+  --pnd-accent-rgb: 141, 198, 63;
+
+  // --- Surfaces ---
+  --pnd-tint:      #eef5f3;
+  --pnd-tint-2:    #f6faf9;
+  --pnd-tint-warm: #f7f4ee;
+
+  // --- Ink + lines ---
+  --pnd-ink:    #16211e;
+  --pnd-body:   #36433f;
+  --pnd-muted:  #6a7672;
+  --pnd-faint:  #93a09b;
+  --pnd-line:   #e6ecea;
+  --pnd-line-2: #eef2f1;
+
+  // --- Status ---
+  --pnd-sale:    #d8453b;
+  --pnd-sale-bg: #fcebe9;
+  --pnd-star:    #f3b01c;
+
+  // --- Shape ---
+  --pnd-radius:      16px;
+  --pnd-radius-sm:   9px;
+  --pnd-radius-pill: 999px;
+
+  // --- Type ---
+  --pnd-font-head: "Montserrat", system-ui, -apple-system, sans-serif;
+  --pnd-font-body: "Source Sans 3", system-ui, -apple-system, sans-serif;
+
+  // --- Shadows ---
+  --pnd-sh-card: 0 1px 2px rgba(16, 40, 36, 0.04), 0 6px 24px rgba(16, 40, 36, 0.06);
+  --pnd-sh-pop:  0 12px 40px rgba(12, 40, 36, 0.16);
+
+  // ====== Bootstrap custom-property remap (drop-in path) ======
+  --bs-primary: #15665c;
+  --bs-primary-rgb: 21, 102, 92;
+  --bs-primary-text-emphasis: #0f5249;
+  --bs-secondary: #8dc63f;
+  --bs-secondary-rgb: 141, 198, 63;
+  --bs-danger: #d8453b;
+  --bs-danger-rgb: 216, 69, 59;
+  --bs-success: #188251;
+  --bs-warning: #f3b01c;
+  --bs-link-color: #15665c;
+  --bs-link-color-rgb: 21, 102, 92;
+  --bs-link-hover-color: #0f5249;
+  --bs-body-color: #36433f;
+  --bs-body-color-rgb: 54, 67, 63;
+  --bs-body-font-family: "Source Sans 3", system-ui, -apple-system, sans-serif;
+  --bs-border-color: #e6ecea;
+  --bs-border-radius: 1rem;
+  --bs-border-radius-sm: 0.5rem;
+  --bs-border-radius-lg: 1.25rem;
+  --bs-heading-color: #16211e;
+}

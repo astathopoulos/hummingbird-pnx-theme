@@ -1,0 +1,27 @@
+// ============================================================
+// PharmacyNextDoor — Hummingbird child theme · SCSS entry point
+// ============================================================
+//
+// Build integration (matches the parent Hummingbird pipeline):
+//
+//   1. BOOTSTRAP VARIABLE OVERRIDES — injected BEFORE Bootstrap so the
+//      framework compiles with our tokens. In the parent build these slot
+//      into bootstrap/overrides/variables/. Forwarded here for reference:
+//
+//        bootstrap/overrides/variables/_variables.scss
+//        bootstrap/overrides/variables/components/*
+//        abstract/variables/_colors.scss
+//        abstract/variables/_typography.scss
+//
+//   2. PRESTASHOP / THEME LAYER — our selector-driven overrides, authored
+//      as plain-CSS-compatible partials (they consume --pnd-* custom
+//      properties from prestashop/base/_tokens.scss). These compile to the
+//      same output shipped in assets/css/theme.css.
+//
+// @use "abstract/variables/colors" as *;
+// @use "abstract/variables/typography" as *;
+// @use "bootstrap/overrides/variables/variables" as *;
+// @use "bootstrap/overrides/variables/components/buttons" as *;
+// ... (Bootstrap is then compiled by the parent with these in scope)
+
+@forward "prestashop/index";

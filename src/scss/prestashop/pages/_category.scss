@@ -1,0 +1,29 @@
+// ============================================================
+// Page — Category / listing (#products, toolbar, sort, grid)
+// ============================================================
+
+#products { padding-bottom: 64px; }
+.products__container { display: grid; grid-template-columns: 270px 1fr; gap: 32px; align-items: start; }
+.products__main { min-width: 0; }
+
+// Top toolbar (count + filter toggle + sort)
+.products__selection { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
+.products__count { font-size: 13.5px; color: var(--pnd-muted); }
+.products__sort { display: flex; align-items: center; gap: 12px; }
+.products__filter-button { display: none; padding: 9px 16px; }
+.products__sort-dropdown { position: relative; }
+.dropdown-toggle { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 13.5px; }
+.dropdown-menu { border: 1px solid var(--pnd-line); border-radius: var(--pnd-radius-sm); box-shadow: var(--pnd-sh-pop); min-width: 230px; }
+.dropdown-item { font-family: var(--pnd-font-head); font-weight: 600; font-size: 13.5px; }
+.dropdown-item:hover { background: var(--pnd-tint-2); color: var(--pnd-brand); }
+.dropdown-item.current { color: var(--pnd-brand); }
+
+// Category header / description
+#category #left-column,
+#category-description { color: var(--pnd-body); }
+.block-category h1,
+#js-product-list-header .page-title { font-size: 30px; }
+
+// Empty state
+.products__empty,
+#js-product-list .alert { text-align: center; padding: 48px 20px; color: var(--pnd-muted); }

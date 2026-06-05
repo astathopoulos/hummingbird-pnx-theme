@@ -1,0 +1,40 @@
+// ============================================================
+// Page — Home (index): hero slider, trust badges, category tiles,
+// product rails, brand row, newsletter
+// ============================================================
+
+.hero { padding: 26px 0 8px; }
+.slider { position: relative; border-radius: var(--pnd-radius); overflow: hidden; min-height: 420px; background: var(--pnd-tint); }
+.slider .slide { position: absolute; inset: 0; display: grid; grid-template-columns: 1.05fr 0.95fr; opacity: 0; visibility: hidden; transition: opacity 0.6s ease; pointer-events: none; }
+.slider .slide.active { opacity: 1; visibility: visible; pointer-events: auto; }
+.slide-copy { padding: 52px; display: flex; flex-direction: column; justify-content: center; }
+.slide-copy h2 { font-size: 40px; font-weight: 700; color: var(--pnd-ink); margin: 12px 0 14px; }
+.slide-copy p { font-size: 16px; color: var(--pnd-body); max-width: 36ch; }
+.slide.t-teal { background: linear-gradient(135deg, #eef5f3, #dcebe6); }
+.slide.t-lime { background: linear-gradient(135deg, #f1f7e6, #e2efcb); }
+.slide.t-warm { background: linear-gradient(135deg, #f7f4ee, #efe7d8); }
+.price-flag { display: inline-flex; align-items: baseline; gap: 8px; align-self: flex-start; background: #fff; border-radius: var(--pnd-radius-pill); padding: 8px 16px; margin-top: 16px; font-family: var(--pnd-font-head); box-shadow: var(--pnd-sh-card); }
+.price-flag b { color: var(--pnd-sale); font-size: 18px; }
+.slider-dots { position: absolute; bottom: 18px; left: 52px; display: flex; gap: 8px; z-index: 5; }
+.slider-dots button { width: 9px; height: 9px; border-radius: 50%; border: 0; background: rgba(12, 63, 57, 0.25); padding: 0; transition: width 0.2s, background 0.2s; }
+.slider-dots button.active { width: 26px; border-radius: 5px; background: var(--pnd-brand); }
+
+// Trust badges
+.trust { border-top: 1px solid var(--pnd-line-2); border-bottom: 1px solid var(--pnd-line-2); margin-top: 28px; }
+.trust .wrap { display: grid; grid-template-columns: repeat(4, 1fr); }
+.trust-item { display: flex; align-items: center; gap: 14px; padding: 22px 8px; }
+.trust-item + .trust-item { border-left: 1px solid var(--pnd-line-2); padding-left: 26px; }
+.trust-ic { flex: none; width: 44px; height: 44px; border-radius: 12px; background: var(--pnd-tint); color: var(--pnd-brand); display: grid; place-items: center; }
+.trust-item b { display: block; font-family: var(--pnd-font-head); font-weight: 600; font-size: 14.5px; color: var(--pnd-ink); }
+.trust-item span { font-size: 13px; color: var(--pnd-muted); }
+
+// Section heads + rails
+.sec-head { display: flex; align-items: flex-end; justify-content: space-between; margin: 48px 0 22px; }
+.sec-head .eyebrow { font-family: var(--pnd-font-head); font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pnd-brand); }
+.sec-head h2 { font-size: 26px; margin: 4px 0 0; }
+.see-all { font-family: var(--pnd-font-head); font-weight: 600; color: var(--pnd-brand); display: inline-flex; align-items: center; gap: 4px; }
+
+// Newsletter (ps_emailsubscription)
+.news-card { background: linear-gradient(150deg, var(--pnd-brand), var(--pnd-teal-900)); color: #fff; border-radius: var(--pnd-radius); padding: 48px 56px; position: relative; overflow: hidden; }
+.news-card h2 { color: #fff; }
+.news-form input { height: 52px; border-radius: 12px; border: 0; padding: 0 16px; }

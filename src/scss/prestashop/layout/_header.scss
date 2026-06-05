@@ -1,0 +1,65 @@
+// ============================================================
+// Layout — Header (header-top, header-bottom, header-block, nav)
+// Targets Hummingbird's real header partials markup.
+// ============================================================
+
+.header-top {
+  background: #fff;
+  border-bottom: 1px solid var(--pnd-line-2);
+  font-size: 13px;
+}
+.header-top__left,
+.header-top__right { display: flex; align-items: center; gap: 18px; }
+.header-top__right { justify-content: flex-end; }
+
+.header-bottom { background: #fff; border-bottom: 1px solid var(--pnd-line); }
+.header-bottom__container { padding-top: 14px; padding-bottom: 14px; }
+.header-bottom__row { align-items: center; gap: 14px; }
+.header-bottom__logo img { max-height: 52px; width: auto; }
+.header-bottom__h1 { line-height: 0; }
+
+// User / cart pills (header-block)
+.header-block { position: relative; }
+.header-block__action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  border-radius: 14px;
+  color: var(--pnd-ink);
+  transition: background 0.15s ease;
+}
+.header-block__action-btn:hover { background: var(--pnd-tint-2); }
+.header-block__icon { font-size: 26px; color: var(--pnd-brand); }
+.header-block__txt { display: flex; flex-direction: column; line-height: 1.2; }
+.header-block__txt small { font-size: 11px; color: var(--pnd-muted); }
+.header-block__txt b { font-family: var(--pnd-font-head); font-size: 13.5px; color: var(--pnd-ink); }
+.header-block__badge {
+  position: absolute;
+  top: 2px;
+  left: 30px;
+  min-width: 19px;
+  height: 19px;
+  padding: 0 5px;
+  border-radius: 10px;
+  background: var(--pnd-accent);
+  color: var(--pnd-teal-900);
+  font-family: var(--pnd-font-head);
+  font-weight: 700;
+  font-size: 11px;
+  display: grid;
+  place-items: center;
+}
+
+// Full-width nav row (ps_mainmenu lands here)
+.header-nav-full-width { background: #fff; border-bottom: 1px solid var(--pnd-line); position: sticky; top: 0; z-index: 120; }
+.main-menu__item { position: relative; }
+.main-menu__link { display: inline-flex; align-items: center; gap: 6px; padding: 14px 14px; font-family: var(--pnd-font-head); font-weight: 600; font-size: 14px; color: var(--pnd-ink); }
+.main-menu__item:hover > .main-menu__link { color: var(--pnd-brand); }
+.main-menu__link .material-icons { font-size: 18px; opacity: 0.7; transition: transform 0.15s ease; }
+.main-menu__item:hover > .main-menu__link .material-icons { transform: rotate(180deg); }
+.main-menu__sub { background: #fff; border: 1px solid var(--pnd-line); border-radius: var(--pnd-radius-sm); box-shadow: var(--pnd-sh-pop); }
