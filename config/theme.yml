@@ -38,6 +38,12 @@ assets:
         path: assets/css/theme.css
         media: all
         priority: 300
+  js:
+    all:
+      - id: hummingbird_pnd-theme
+        path: assets/js/theme.js
+        priority: 300
+        attribute: defer
 
 global_settings:
   configuration:

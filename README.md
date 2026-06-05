@@ -96,3 +96,43 @@ theme-boundary rules.
 `assets/css/theme.css` is generated from the `prestashop/` partials (token layer
 first, then base → layout → components → pages). Recompile with the parent
 Hummingbird build, or re-concatenate the partials in that order.
+
+## Template overrides (markup)
+
+Nearly all of our redesign is CSS — the markup already matches Hummingbird. The
+**only structural change** is a manufacturer/brand line on the product card, so
+that's the only `.tpl` we override, via Smarty block inheritance (no full copy):
+
+```
+templates/catalog/_partials/miniatures/product.tpl
+  → {extends file='parent:…'} + {block name='product_name' prepend} brand line
+```
+
+The wishlist heart in the design is rendered by the **`blockwishlist`** module —
+enable it rather than hard-coding the button.
+
+## Behaviour (JavaScript)
+
+Cart, mini-cart, quantity, wishlist, faceted search, sort, pagination, product
+gallery, hero slider, mega-menu and search are all owned by **PrestaShop core +
+official modules** (`blockcart`, `blockwishlist`, `ps_facetedsearch`,
+`ps_imageslider`, `ps_mainmenu`, `ps_searchbar`) and the parent Hummingbird TS
+components. They are **not** re-implemented here — doing so would fight the
+modules' Ajax and break Hummingbird's "no business logic in the theme" rule.
+
+The theme ships only genuinely-custom progressive enhancement, in
+`assets/js/theme.js` (source: `src/js/theme.ts`), following Hummingbird's JS
+conventions — no jQuery, `[data-ps-*]` hooks, event delegation, `MutationObserver`:
+
+- **Password-reveal toggle** on auth forms. Opt a field in by adding
+  `data-ps-component="password-reveal"` to its wrapper, e.g. a tiny
+  `_partials/form-fields.tpl` override around password inputs:
+
+  ```smarty
+  <div class="form-group" data-ps-component="password-reveal">
+    {* …existing password input… *}
+  </div>
+  ```
+
+Wired through `theme.yml` (`assets.js`, priority 300, `defer`).
+
